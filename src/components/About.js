@@ -2,77 +2,56 @@ import React, { memo, useState } from 'react'
 
 export default memo(function About() {
 
-    const [mystyle, setmyStyle] = useState({
-        color: 'white',
-        backgroundColor: 'black'
-    })
-
-    const [btntext, setbtntext] = useState("LightMode")
-
-    const toggleStyle = () => {
-        if(mystyle.color == 'white')
-        {
-            setmyStyle({
-                color: 'black',
-                backgroundColor: 'white'
-            })
-            setbtntext("DarkMode")
-        }
-        else
-        {
-            setmyStyle({
-                color: 'white',
-                backgroundColor: 'black',
-                border: '1px solid white'
-            })
-            setbtntext("LightMode")
-        }
-    }
+    
 
 
   return (
-    <div className="container" style = {mystyle}>
-        <h1 className="my-3">About App</h1>
+    <div className="container">
+        <h1 className="my-3">About TextUtils</h1>
         <div className="accordion" id="accordionExample">
             <div className="accordion-item">
                 <h2 className="accordion-header">
-                <button className="accordion-button" type="button" style={mystyle} data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                    Accordion Item #1
+                <button className="accordion-button" type="button"  data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    Remove Extra Spaces
                 </button>
                 </h2>
                 <div id="collapseOne" className="accordion-collapse collapse show" data-bs-parent="#accordionExample">
-                <div className="accordion-body" style={mystyle}>
-                    <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                <div className="accordion-body" >
+                    TextUtils provides a convenient option to eliminate unnecessary spaces within the text. Users can easily clean up excessive spaces, making the text more readable and organized.
                 </div>
                 </div>
             </div>
             <div className="accordion-item">
                 <h2 className="accordion-header">
-                <button className="accordion-button collapsed" style={mystyle} type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                    Accordion Item #2
+                <button className="accordion-button collapsed"  type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    Convert to Uppercase and Lowercase
                 </button>
                 </h2>
                 <div id="collapseTwo" className="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                <div className="accordion-body" style={mystyle}>
-                    <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                <div className="accordion-body" >
+                    Users can effortlessly transform text to uppercase or lowercase according to their preference. This feature ensures easy and quick modification of text cases without the need for manual adjustments.
                 </div>
                 </div>
             </div>
             <div className="accordion-item">
                 <h2 className="accordion-header">
-                <button className="accordion-button collapsed" style={mystyle} type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                    Accordion Item #3
+                <button className="accordion-button collapsed"  type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    Copy to Clipboard
                 </button>
                 </h2>
                 <div id="collapseThree" className="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                <div className="accordion-body" style={mystyle}>
-                    <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                <div className="accordion-body" >
+                    This functionality enables users to copy the modified or original text to the clipboard with a simple click. It simplifies the process of transferring text to other applications or locations without the hassle of manual copying.
                 </div>
                 </div>
             </div>
         </div>
-        <div className="container my-3">
-            <button onClick={toggleStyle} className="btn btn-primary" type="submit">{btntext}</button>
+        <br/>
+        <div class="contact-box my-3">
+            <h2>Developer Contact</h2>
+            <br/>
+            <p>E-Mail: <a href="mailto:bharadwaja1.618@gmail.com">bharadwaja1.618@gmail.com</a></p>
+            <p>Instagram: <a href="https://www.instagram.com/mynortherncompass_" target="_blank">mynortherncompass_</a></p>
         </div>
     </div>
   )

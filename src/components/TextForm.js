@@ -41,7 +41,8 @@ export default memo(function TextForm(props) {
   return (
     <>
     <div className="container" style={{color: props.mode==='dark'?'white':'black'}}>
-        <h1>{props.heading}</h1>
+        <h1>Welcome to TextUtils</h1>
+        <h3>Please Enter Your Text</h3>
         <div className="mb-3">
             <textarea className="form-control" value = {text} onChange={handleOnChange} style={{backgroundColor: props.mode==='dark'?'grey':'white'}} id="myBox" rows="8"></textarea>
         </div>
